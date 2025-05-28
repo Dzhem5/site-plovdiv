@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пловдив - Културната столица на България</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#2B4570',secondary:'#E2725B'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Open Sans', sans-serif;
+scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6, nav {
+font-family: 'Roboto', sans-serif;
+}
+.hero {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://readdy.ai/api/search-image?query=Panoramic%20view%20of%20Plovdiv%20city%20in%20Bulgaria%20with%20historic%20old%20town%20architecture%2C%20ancient%20Roman%20theater%2C%20and%20the%20seven%20hills.%20Beautiful%20cityscape%20with%20traditional%20Bulgarian%20houses%2C%20Orthodox%20churches%2C%20and%20the%20Maritsa%20river.%20Warm%20sunset%20light%2C%20soft%20golden%20hour%20illumination%2C%20clear%20blue%20sky%20with%20some%20clouds&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+.section-title::after {
+content: "";
+display: block;
+width: 80px;
+height: 3px;
+background-color: #E2725B;
+margin-top: 10px;
+}
+.landmark-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.back-to-top {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 99;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #E2725B;
+transition: width 0.3s;
+}
+.nav-link:hover::after, .nav-link.active::after {
+width: 100%;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white bg-opacity-95 shadow-md z-50 transition-all duration-300">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<a href="#home" class="text-2xl font-bold text-primary">Пловдив</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors">Начало</a>
+<a href="#geography" class="nav-link text-gray-800 hover:text-primary transition-colors">География</a>
+<a href="#history" class="nav-link text-gray-800 hover:text-primary transition-colors">История</a>
+<a href="#landmarks" class="nav-link text-gray-800 hover:text-primary transition-colors">Забележителности</a>
+</div>
+<!-- Mobile Navigation Button -->
+<div class="md:hidden flex items-center">
+<button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-2x"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t border-gray-200">
+<div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+<a href="#home" class="py-2 text-gray-800 hover:text-primary transition-colors">Начало</a>
+<a href="#geography" class="py-2 text-gray-800 hover:text-primary transition-colors">География</a>
+<a href="#history" class="py-2 text-gray-800 hover:text-primary transition-colors">История</a>
+<a href="#landmarks" class="py-2 text-gray-800 hover:text-primary transition-colors">Забележителности</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+<div class="absolute inset-0 w-full h-full">
+<video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://public.readdy.ai/gen_page/plovdiv_aerial_2025.mp4" type="video/mp4">
+</video>
+<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+</div>
+<div class="container mx-auto px-4 text-center relative z-10">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Добре дошли в Пловдив – културната столица на България</h1>
+<p class="text-xl text-white max-w-3xl mx-auto mb-8">Открийте магията на един от най-старите градове в Европа, където история, култура и съвременност се преплитат в уникална хармония.</p>
+<a href="#geography" class="bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-opacity-90 transition-all shadow-lg whitespace-nowrap">Научете повече</a>
+<!-- Weather Widget -->
+<div class="mt-12 bg-white bg-opacity-20 backdrop-blur-md rounded-xl p-6 max-w-md mx-auto">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center">
+<i id="weather-icon" class="ri-sun-line ri-2x text-yellow-400 mr-4"></i>
+<div class="text-left">
+<h3 class="text-white text-2xl font-semibold" id="temperature">-- °C</h3>
+<p class="text-white text-lg" id="weather-desc">Зареждане...</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 text-white">
+<div class="text-center">
+<i class="ri-drop-line ri-lg mb-1"></i>
+<p class="text-sm">Влажност</p>
+<p class="font-semibold" id="humidity">--%</p>
+</div>
+<div class="text-center">
+<i class="ri-windy-line ri-lg mb-1"></i>
+<p class="text-sm">Вятър</p>
+<p class="font-semibold" id="wind">-- км/ч</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Scroll Down Indicator -->
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+<div class="w-10 h-10 flex items-center justify-center text-white">
+<i class="ri-arrow-down-line ri-2x"></i>
+</div>
+</div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto">
+<p class="text-lg text-gray-700 leading-relaxed">
+Пловдив е вторият по големина град в България и един от най-старите градове в Европа, с история, датираща от повече от 8000 години. Разположен на седем хълма и разделен от река Марица, градът е бил свидетел на възхода и падението на множество цивилизации – траки, римляни, византийци, османци и българи. През 2019 г. Пловдив беше Европейска столица на културата, което подчерта богатото му културно наследство и динамичен съвременен живот. От древния Римски театър до възрожденските къщи в Стария град и бохемския квартал Капана, Пловдив предлага уникално пътешествие през времето и културите.
+</p>
+</div>
+</div>
+</section>
+<!-- Geography Section -->
+<section id="geography" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 section-title">География на Пловдив</h2>
+<div class="flex flex-col lg:flex-row gap-8 items-center">
+<div class="lg:w-1/2">
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+Пловдив се намира в централната част на Южна България, в Горнотракийската низина, на двата бряга на река Марица. Градът е известен със своите седем хълма (тепета): Джамбаз тепе, Небет тепе, Таксим тепе, Сахат тепе, Джендем тепе, Бунарджик и Марково тепе, които му придават уникален релеф и панорамни гледки.
+</p>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+С площ от около 102 кв. км, Пловдив е важен транспортен възел, разположен на кръстопътя между Западна Европа и Близкия изток. Намира се на 150 км югоизточно от столицата София.
+</p>
+<p class="text-lg text-gray-700 leading-relaxed">
+Климатът в Пловдив е преходно-континентален с влияние от Средиземно море. Лятото е горещо със средни температури около 24°C, а зимата е сравнително мека със средни температури около 0°C. Валежите са умерени, с максимум през пролетта и есента.
+</p>
+</div>
+<div class="lg:w-1/2">
+<div class="rounded-lg overflow-hidden shadow-xl">
+<img src="https://readdy.ai/api/search-image?query=Panoramic%20view%20of%20Plovdiv%20city%20showing%20the%20seven%20hills%2C%20Maritsa%20river%20flowing%20through%20the%20city%20center%2C%20and%20the%20surrounding%20Thracian%20Plain.%20Beautiful%20landscape%20with%20clear%20blue%20sky%2C%20some%20clouds%2C%20and%20lush%20green%20vegetation.%20The%20citys%20unique%20geography%20with%20hills%20rising%20from%20the%20flat%20plain%2C%20traditional%20Bulgarian%20architecture%20visible%20from%20above&width=800&height=600&seq=2&orientation=landscape" alt="Пловдив и седемте хълма" class="w-full h-auto object-cover object-top">
+<div class="bg-white p-4">
+<p class="text-sm text-gray-600 italic">Панорамна гледка към Пловдив, показваща характерните седем хълма и река Марица</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Climate Information -->
+<div class="mt-12 bg-white rounded-lg shadow-md p-6">
+<h3 class="text-2xl font-semibold text-gray-800 mb-4">Климат на Пловдив</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-blue-50 rounded-lg p-4 text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center text-blue-500">
+<i class="ri-sun-line ri-2x"></i>
+</div>
+<h4 class="font-semibold text-gray-800">Лято</h4>
+<p class="text-gray-700">Горещо и сухо</p>
+<p class="text-gray-700">24-35°C</p>
+</div>
+<div class="bg-orange-50 rounded-lg p-4 text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center text-orange-500">
+<i class="ri-leaf-line ri-2x"></i>
+</div>
+<h4 class="font-semibold text-gray-800">Есен</h4>
+<p class="text-gray-700">Умерена</p>
+<p class="text-gray-700">10-20°C</p>
+</div>
+<div class="bg-blue-100 rounded-lg p-4 text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center text-blue-700">
+<i class="ri-snowy-line ri-2x"></i>
+</div>
+<h4 class="font-semibold text-gray-800">Зима</h4>
+<p class="text-gray-700">Мека</p>
+<p class="text-gray-700">-5 до 5°C</p>
+</div>
+<div class="bg-green-50 rounded-lg p-4 text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center text-green-500">
+<i class="ri-plant-line ri-2x"></i>
+</div>
+<h4 class="font-semibold text-gray-800">Пролет</h4>
+<p class="text-gray-700">Приятна</p>
+<p class="text-gray-700">10-20°C</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- History Section -->
+<section id="history" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 section-title">История на Пловдив</h2>
+<!-- Timeline -->
+<div class="relative">
+<!-- Timeline Line -->
+<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
+<!-- Timeline Items -->
+<div class="space-y-12">
+<!-- Thracian Period -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<h3 class="text-2xl font-semibold text-primary mb-2">Тракийски период</h3>
+<p class="text-gray-700 mb-4">
+Първите селища на територията на днешен Пловдив датират от 6-то хилядолетие пр.н.е. Около 1200 г. пр.н.е. тракийското племе беси основава селище на хълма Небет тепе, наречено Евмолпия. Градът става важен религиозен и търговски център на траките.
+</p>
+</div>
+<div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<div class="rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Ancient%20Thracian%20settlement%20ruins%20on%20a%20hill%2C%20archaeological%20excavations%20showing%20stone%20foundations%2C%20pottery%20fragments%2C%20and%20primitive%20tools.%20Historical%20artifacts%20from%206000%20BC%2C%20early%20civilization%20evidence.%20Natural%20lighting%2C%20detailed%20archaeological%20site&width=600&height=400&seq=3&orientation=landscape" alt="Тракийски период" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Roman Period -->
+<div class="flex flex-col md:flex-row-reverse items-center">
+<div class="md:w-1/2 md:pl-12">
+<h3 class="text-2xl font-semibold text-primary mb-2">Римски период</h3>
+<p class="text-gray-700 mb-4">
+През 72 г. пр.н.е. Римската империя завладява града и го преименува на Тримонциум ("град на трите хълма"). Под римско управление градът процъфтява като важен административен център на провинция Тракия. От този период са запазени множество архитектурни паметници, включително Античният театър, Форумът, Стадионът и Одеонът.
+</p>
+</div>
+<div class="md:w-1/2 md:pr-12 mt-4 md:mt-0">
+<div class="rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Ancient%20Roman%20theater%20in%20Plovdiv%2C%20Bulgaria%2C%20well-preserved%20stone%20amphitheater%20with%20semicircular%20rows%20of%20seating%2C%20marble%20columns%20and%20stage.%20Archaeological%20site%20from%202nd%20century%20AD%20showing%20classical%20Roman%20architecture.%20Warm%20evening%20light%20illuminating%20the%20ancient%20stones&width=600&height=400&seq=4&orientation=landscape" alt="Римски период" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Byzantine Period -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<h3 class="text-2xl font-semibold text-primary mb-2">Византийски период</h3>
+<p class="text-gray-700 mb-4">
+След разделянето на Римската империя, Пловдив става част от Византия. През този период градът е известен като Филипопол. Християнството се утвърждава като основна религия, и се строят множество църкви. Градът претърпява нашествия от готи, хуни, авари и славяни.
+</p>
+</div>
+<div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<div class="rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Byzantine%20era%20church%20ruins%20in%20Plovdiv%2C%20Bulgaria%2C%20ancient%20Christian%20architecture%20with%20stone%20walls%2C%20arched%20doorways%2C%20and%20religious%20mosaics.%20Archaeological%20site%20from%205th-6th%20century%20AD%20showing%20early%20Christian%20influence.%20Soft%20natural%20lighting%20highlighting%20the%20historical%20structure&width=600&height=400&seq=5&orientation=landscape" alt="Византийски период" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Ottoman Period -->
+<div class="flex flex-col md:flex-row-reverse items-center">
+<div class="md:w-1/2 md:pl-12">
+<h3 class="text-2xl font-semibold text-primary mb-2">Османски период</h3>
+<p class="text-gray-700 mb-4">
+През 1364 г. Пловдив пада под османска власт и е преименуван на Филибе. Градът става важен административен и търговски център в империята. През Възраждането (18-19 век) българската култура и национално самосъзнание се възраждат. От този период датират множество архитектурни паметници в Стария град, включително красивите възрожденски къщи.
+</p>
+</div>
+<div class="md:w-1/2 md:pr-12 mt-4 md:mt-0">
+<div class="rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Traditional%20Bulgarian%20Revival%20architecture%20in%20Plovdivs%20Old%20Town%2C%20colorful%20houses%20with%20wooden%20elements%2C%20overhanging%20upper%20floors%2C%20and%20ornate%20details.%20Ottoman%20period%20buildings%20from%2018th-19th%20century%20showing%20cultural%20blend.%20Cobblestone%20street%2C%20warm%20afternoon%20light%20on%20the%20historic%20facades&width=600&height=400&seq=6&orientation=landscape" alt="Османски период" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Modern Period -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<h3 class="text-2xl font-semibold text-primary mb-2">Съвременен период</h3>
+<p class="text-gray-700 mb-4">
+След Освобождението на България от османска власт през 1878 г., Пловдив става главен град на Източна Румелия до Съединението с Княжество България през 1885 г. През 20-ти век градът се развива като важен индустриален, търговски и културен център. През 2019 г. Пловдив е Европейска столица на културата, което допринася за обновяването на градската инфраструктура и повишаване на международната му популярност.
+</p>
+</div>
+<div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<div class="rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=Modern%20Plovdiv%20cityscape%20with%20mix%20of%20historical%20and%20contemporary%20architecture%2C%20pedestrian%20streets%20filled%20with%20people%2C%20cafes%2C%20and%20cultural%20venues.%20European%20Capital%20of%20Culture%202019%20atmosphere%20with%20art%20installations%2C%20renovated%20urban%20spaces.%20Bright%20daylight%2C%20vibrant%20city%20life&width=600&height=400&seq=7&orientation=landscape" alt="Съвременен период" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Landmarks Section -->
+<section id="landmarks" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 section-title">Забележителности в Пловдив</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Roman Theater -->
+<div class="landmark-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Ancient%20Roman%20Theater%20in%20Plovdiv%2C%20Bulgaria%2C%20perfectly%20preserved%20semicircular%20amphitheater%20with%20marble%20seating%20and%20stage%2C%20surrounded%20by%20city%20views.%20Detailed%20stone%20architecture%20from%202nd%20century%20AD%2C%20dramatic%20lighting%20highlighting%20the%20ancient%20structure%20against%20blue%20sky&width=600&height=400&seq=8&orientation=landscape" alt="Римският театър" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Римският театър</h3>
+<p class="text-gray-700">
+Построен през II век по времето на император Траян, Античният театър е един от най-добре запазените римски театри в света. Разположен е на хълма Джамбаз тепе и разкрива спираща дъха гледка към града. Театърът е с капацитет около 7000 зрители и все още се използва за културни събития и представления.
+</p>
+</div>
+</div>
+<!-- Old Town -->
+<div class="landmark-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Plovdiv%20Old%20Town%20%28Starinen%20Plovdiv%29%20with%20colorful%20Bulgarian%20Revival%20houses%2C%20wooden%20elements%2C%20cobblestone%20streets%2C%20and%20traditional%20architecture.%20Rich%20details%20of%2018th-19th%20century%20buildings%20with%20overhanging%20upper%20floors%2C%20ornate%20woodwork%2C%20and%20vibrant%20colors.%20Charming%20narrow%20street%20perspective%20with%20warm%20sunlight&width=600&height=400&seq=9&orientation=landscape" alt="Старинен Пловдив" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Старинен Пловдив</h3>
+<p class="text-gray-700">
+Архитектурно-исторически резерват, който обхваща Трихълмието (Джамбаз, Небет и Таксим тепе). Тук се намират едни от най-красивите възрожденски къщи в България, като къщата на Хиндлиян, къщата на Балабанов, къщата на Недкович и други. Старият град е известен със своите тесни калдъръмени улички, автентична атмосфера и множество музеи, галерии, ресторанти и занаятчийски работилници.
+</p>
+</div>
+</div>
+<!-- Kapana -->
+<div class="landmark-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Kapana%20Creative%20District%20in%20Plovdiv%2C%20Bulgaria%20with%20colorful%20street%20art%2C%20bohemian%20atmosphere%2C%20narrow%20pedestrian%20streets%20filled%20with%20cafes%2C%20art%20galleries%2C%20and%20craft%20shops.%20Vibrant%20urban%20scene%20with%20young%20people%2C%20outdoor%20seating%2C%20and%20artistic%20elements.%20Bright%20daylight%20illuminating%20the%20creative%20neighborhood&width=600&height=400&seq=10&orientation=landscape" alt="Капана" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Капана</h3>
+<p class="text-gray-700">
+Бивш занаятчийски квартал, който през последните години се превърна в творчески квартал и културно средище. Името идва от лабиринта от малки улички, които "улавят" посетителите като в капан. Днес Капана е пълен с артистични пространства, галерии, дизайнерски магазини, кафенета, ресторанти и барове. Кварталът е известен със своята бохемска атмосфера, улично изкуство и културни събития.
+</p>
+</div>
+</div>
+<!-- Nebet Tepe -->
+<div class="landmark-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Nebet%20Tepe%20hill%20in%20Plovdiv%20with%20ancient%20fortress%20ruins%2C%20stone%20walls%20and%20archaeological%20remains%20from%20Thracian%20settlement.%20Panoramic%20view%20of%20the%20city%20from%20the%20hilltop%2C%20historic%20site%20with%20evidence%20of%20earliest%20settlement.%20Golden%20hour%20lighting%20creating%20dramatic%20shadows%20on%20the%20ancient%20stones&width=600&height=400&seq=11&orientation=landscape" alt="Небет тепе" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Небет тепе</h3>
+<p class="text-gray-700">
+Един от седемте хълма на Пловдив, където се намират останките от най-старото селище на територията на града, датиращо от VI хилядолетие пр.н.е. Тук могат да се видят руините на тракийската крепост Евмолпия, както и останки от римски, византийски и средновековни укрепления. От върха се разкрива впечатляваща панорамна гледка към целия град.
+</p>
+</div>
+</div>
+<!-- Ethnographic Museum -->
+<div class="landmark-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Ethnographic%20Museum%20in%20Plovdiv%20housed%20in%20a%20beautiful%20Bulgarian%20Revival%20house%20with%20symmetrical%20facade%2C%20ornate%20woodwork%2C%20and%20colorful%20details.%20Traditional%2019th%20century%20architecture%20with%20museum%20exhibits%20visible%20through%20windows.%20Historic%20building%20with%20cultural%20significance%2C%20soft%20natural%20lighting&width=600&height=400&seq=12&orientation=landscape" alt="Етнографски музей" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Етнографски музей</h3>
+<p class="text-gray-700">
+Разположен в една от най-красивите възрожденски къщи в Стария град - къщата на Аргир Куюмджиоглу от 1847 г. Музеят представя богата колекция от експонати, свързани с традиционния бит, култура и занаяти на българите от Пловдивския регион от XVIII-XIX век. Посетителите могат да видят автентични народни носии, тъкани, бродерии, дърворезби, медни съдове, музикални инструменти и други етнографски материали.
+</p>
+</div>
+</div>
+<!-- Dzhumaya Mosque -->
+<div class="landmark-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Dzhumaya%20Mosque%20in%20Plovdiv%2C%20Bulgaria%2C%20Ottoman%20architecture%20with%20large%20dome%2C%20tall%20minaret%2C%20and%20decorative%20elements.%20Historic%2014th%20century%20Islamic%20building%20with%20stone%20and%20brick%20construction%2C%20beautiful%20geometric%20patterns%20and%20calligraphy.%20Clear%20blue%20sky%20background%2C%20architectural%20details%20clearly%20visible&width=600&height=400&seq=13&orientation=landscape" alt="Джумая джамия" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Джумая джамия</h3>
+<p class="text-gray-700">
+Една от най-старите и най-големите османски джамии на Балканите, построена през XIV век. Разположена е в центъра на града, до Римския стадион. Джамията впечатлява със своята архитектура, с деветте купола, минарето и богатата украса. В непосредствена близост се намира и Джумая чаршия - традиционен пазар, където могат да се намерят различни стоки, сувенири и антики.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-100 pt-12 pb-6">
+<div class="container mx-auto px-4">
+<div class="text-center mb-8">
+<p class="text-gray-600 italic">Сайтът е създаден от Dzhem Ali</p>
+</div>
+<div class="border-t border-gray-200 pt-6">
+<p class="text-center text-gray-500 text-sm">© 2025 Пловдив - Всички права запазени</p>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<button id="back-to-top" class="back-to-top bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-all">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+<!-- Scripts -->
+<script id="mobile-menu-script">
+try {
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
+
+    if (!mobileMenuButton || !mobileMenu) {
+      console.warn('Mobile menu elements not found');
+      return;
+    }
+
+    const toggleMenu = () => {
+      isMenuOpen = !isMenuOpen;
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuButton.querySelector('i');
+      if (icon) {
+        icon.className = isMenuOpen ? 'ri-close-line ri-2x' : 'ri-menu-line ri-2x';
+      }
+    };
+
+    mobileMenuButton.addEventListener('click', toggleMenu);
+
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        isMenuOpen = false;
+        mobileMenu.classList.add('hidden');
+        const icon = mobileMenuButton.querySelector('i');
+        if (icon) {
+          icon.className = 'ri-menu-line ri-2x';
+        }
+      });
+    });
+  });
+} catch (error) {
+  console.error('Mobile menu initialization error:', error);
+}
+</script>
+<script id="scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTopButton = document.getElementById('back-to-top');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+let isScrolling = false;
+let scrollTimeout;
+function updateScroll() {
+if (!isScrolling) {
+window.requestAnimationFrame(() => {
+if (backToTopButton) {
+backToTopButton.style.display = window.pageYOffset > 300 ? 'flex' : 'none';
+}
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 100;
+const sectionHeight = section.clientHeight;
+if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+current = section.getAttribute('id');
+}
+});
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href') === `#${current}`) {
+link.classList.add('active');
+}
+});
+isScrolling = false;
+});
+}
+isScrolling = true;
+}
+if (backToTopButton && navLinks.length && sections.length) {
+window.addEventListener('scroll', () => {
+clearTimeout(scrollTimeout);
+scrollTimeout = setTimeout(updateScroll, 10);
+}, { passive: true });
+backToTopButton.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+navLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+const targetId = link.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+if (targetSection) {
+window.scrollTo({
+top: targetSection.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+}
+});
+</script>
+<script id="nav-scroll-effect">
+document.addEventListener('DOMContentLoaded', function() {
+const nav = document.querySelector('nav');
+let lastScrollTop = 0;
+let isScrolling = false;
+if (nav) {
+const handleNavScroll = () => {
+if (!isScrolling) {
+window.requestAnimationFrame(() => {
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+if (scrollTop > 50) {
+nav.classList.add('shadow-lg');
+nav.classList.remove('shadow-md');
+} else {
+nav.classList.remove('shadow-lg');
+nav.classList.add('shadow-md');
+}
+lastScrollTop = scrollTop;
+isScrolling = false;
+});
+}
+isScrolling = true;
+};
+window.addEventListener('scroll', handleNavScroll, { passive: true });
+}
+});
+</script>
+<script id="weather-widget">
+try {
+  document.addEventListener('DOMContentLoaded', function() {
+    const weatherIcons = {
+      'Sunny': 'ri-sun-line',
+      'Partly cloudy': 'ri-sun-cloudy-line',
+      'Cloudy': 'ri-cloudy-line',
+      'Overcast': 'ri-cloudy-2-line',
+      'Rain': 'ri-rainy-line',
+      'Snow': 'ri-snowy-line',
+      'Thunder': 'ri-thunderstorms-line',
+      'Mist': 'ri-mist-line'
+    };
+
+    const weatherDescriptions = {
+      'Sunny': 'Слънчево',
+      'Partly cloudy': 'Частична облачност',
+      'Cloudy': 'Облачно',
+      'Overcast': 'Предимно облачно',
+      'Rain': 'Дъжд',
+      'Snow': 'Сняг',
+      'Thunder': 'Гръмотевична буря',
+      'Mist': 'Мъгла'
+    };
+
+    let weatherInterval;
+
+    const updateWeatherUI = (data) => {
+      const elements = {
+        temp: document.getElementById('temperature'),
+        desc: document.getElementById('weather-desc'),
+        humidity: document.getElementById('humidity'),
+        wind: document.getElementById('wind'),
+        icon: document.getElementById('weather-icon')
+      };
+
+      if (!Object.values(elements).every(el => el)) {
+        throw new Error('Weather UI elements not found');
+      }
+
+      elements.temp.textContent = `${Math.round(data.current.temp_c)}°C`;
+      elements.desc.textContent = weatherDescriptions[data.current.condition.text] || data.current.condition.text;
+      elements.humidity.textContent = `${data.current.humidity}%`;
+      elements.wind.textContent = `${Math.round(data.current.wind_kph)} км/ч`;
+      elements.icon.className = `${weatherIcons[data.current.condition.text] || 'ri-sun-line'} ri-2x text-yellow-400 mr-4`;
+    };
+
+    async function getWeather() {
+      try {
+        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=8ab22dc92ed34682bb9200459252805&q=Plovdiv&aqi=no');
+        if (!response.ok) {
+          throw new Error(`Weather API request failed: ${response.status}`);
+        }
+        const data = await response.json();
+        if (data && data.current) {
+          updateWeatherUI(data);
+        } else {
+          throw new Error('Invalid weather data format');
+        }
+      } catch (error) {
+        console.error('Weather data fetch error:', error);
+      }
+    }
+
+    getWeather();
+    weatherInterval = setInterval(getWeather, 600000);
+
+    window.addEventListener('unload', () => {
+      if (weatherInterval) {
+        clearInterval(weatherInterval);
+      }
+    });
+  });
+} catch (error) {
+  console.error('Weather widget initialization error:', error);
+}
+</script>
+</body>
+</html>
